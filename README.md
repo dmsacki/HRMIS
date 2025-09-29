@@ -28,7 +28,7 @@
 
 1. **Clone the repository**  
    ```sh
-   git clone https://github.com/your-org/mkombozi-hrmis.git
+   git clone https://github.com/dmsacki/HRMIS.git
    ```
 
 2. **Set up the database**
