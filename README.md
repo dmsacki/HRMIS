@@ -1,6 +1,7 @@
 # Mkombozi HRMIS
 
 **Mkombozi HRMIS** is a Human Resource Management Information System for task allocation, performance evaluation, and employee management. It is designed for organizations to streamline HR processes, manage tasks, appraisals, and generate insightful reports.
+ This repository contains the SQL schema and seed data to set up the database, as well as the source code for the HRMIS application.
 
 ## Features
 
@@ -23,6 +24,63 @@
   - View audit logs, appraisal scores, task summaries, and feedback.
 - **Email Notifications**: Email alerts for task assignments and status updates (SMTP/PHPMailer support).
 - **Responsive UI**: Modern, mobile-friendly interface using Bootstrap 5.
+
+## ⚙️ Requirements
+
+- MySQL / MariaDB (version 5.7+ recommended)
+
+- XAMPP / WAMP / LAMP (or any web server to run the application)
+
+- PHP 7.4+ (if using PHP backend)
+
+## 🛠️ Setup Instructions
+
+**Clone the repository**
+
+git clone https://github.com/dmsacki/HRMIS.git
+cd HRMIS/SQL
+
+
+**Create the database and tables**
+
+Open MySQL Workbench or your preferred MySQL client and run:
+
+- Run schema first
+SOURCE mkombozi_hrmis_schema.sql;
+
+
+**Insert sample data**
+
+After creating the schema, run:
+
+- Run seed data
+SOURCE mkombozi_hrmis_seed.sql;
+
+
+**Verify the database**
+
+Check that the database mkombozi_hrmis has been created and contains all tables, views, triggers, and sample data.
+
+**👥 Sample Users**
+Name	Email	Role	Password
+Anne HR	anne.hr@mkombozi.com
+	HR Manager	password123
+John Finance	john.finance@mkombozi.com
+	Employee	password123
+Mussa IT	mussa.it@mkombozi.com
+	Employee	password123
+Diana Ops	diana.ops@mkombozi.com
+	Supervisor	password123
+
+Passwords are hashed with SHA2-256 in the database.
+
+**📝 Notes for Collaborators**
+
+Always run the schema first, then seed data.
+
+For production, change passwords and database connection settings.
+
+Use the SQL folder as the source of truth for database setup.
 
 ## Installation
 
